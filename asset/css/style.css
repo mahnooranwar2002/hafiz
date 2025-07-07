@@ -103,7 +103,9 @@ html {
         & h4 span {
             color: var(--secondary-color);
         }
-
+        & h5 span {
+            color: var(--secondary-color);
+        }
         & p {
             text-align: justify;
             margin: 10px 5px;
@@ -111,15 +113,16 @@ html {
 
         }
         ul{
-          
+          margin-top: 20px;
             display: flex;
             justify-content:start;
             align-items: start;
             padding: 5px;
             gap: 20px;
+  
             & li a i{
-                font-size: 24px;
-               
+                font-size: 20px;
+               border: 1px white solid;
                 padding: 10px;
                 border-radius: 8px;
             }
@@ -152,18 +155,43 @@ html {
            
           
         }
-/* .serviceSec .card:hover {
-    background-color: red;
-    filter: drop-shadow(2px 2px 1px gray);
-} */
 
+.btn:hover{
+    background-color: red;
+}
 .blankdiv {
     height: 4px;
     border-top: 5px dotted red;
 
     width: 15%;
 }
-
+#aboutSec{ 
+     color: white;
+    background-color: var(--primary-color);
+    & #aboutSection{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:0px;
+      padding: 30px;
+        & .right-wrapper{
+        width: 50%;
+       }
+         & .left-wrapper{
+        width: 50%;
+        background-color: var(--primary-color);
+       
+        border-radius: 10px;
+border: var(--background-color) solid 2px;
+        padding: 60px 30px;
+        & h3{
+            color: var(--background-color);
+            margin-bottom: 10px;
+        }
+       }
+    }
+}
 .serviceSec {
 
     background-color: var(--primary-color);
@@ -244,7 +272,7 @@ html {
     & .right-wrapper {
         width: 50%;
         padding: 40px;
-        & h1{
+        & h2{
             color: white;
         }
 
@@ -257,7 +285,17 @@ html {
             padding: 25px;
 
             & i {
-                font-size: 36px;
+                font-size: 34px;
+             
+            }
+              & h6{
+                margin-top: 10px;
+                
+            }
+
+            & p{
+                margin-top: 10px;
+                
             }
 
 
@@ -362,6 +400,13 @@ footer {
 
         & .right-wrapper {
             width: 100%;
+            & .btn{
+               width: 100%;
+               padding: 20px;
+
+               text-align: center;
+
+            }
        & ul{
           
             display: flex;
@@ -386,7 +431,25 @@ footer {
             }
         }
     }
+    #aboutSec{
 
+& #aboutSection{
+   
+    flex-direction: column;
+    & .right-wrapper{
+        padding: 0px;
+        width: 100%;
+        & img{
+            width: 100%;
+        }
+    }
+     & .left-wrapper{
+        padding: 10px;
+        width: 100%;
+    }
+}
+    }
+ 
     .serviceSec {
 
 

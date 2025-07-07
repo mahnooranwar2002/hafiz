@@ -8,13 +8,13 @@ nav_btn.addEventListener("click", function () {
 });
 
 tl.from("#header h2", {
-  duration: 2,
+  duration: 1,
   y: -100,
   stragger: 1,
   opacity: 0.5,
 });
 tl.from("#header .navbar ul li a", {
- duration: 2,
+ duration: 1,
   y: -100,
   stragger: 1,
   opacity: 0,
@@ -36,3 +36,18 @@ tl.from("#bannar .left-wrapper img", {
   opacity: 0,
   ease: "power2.out"
 })
+
+
+
+
+
+
+
+//for typing effect
+var typed = new Typed(".auto_typed",{
+  strings:["social media marketer","Website Designer","YouTube Growth Specialist"],
+  typeSpeed:150,
+  backSpeed:150,
+  loop:true
+}
+)
