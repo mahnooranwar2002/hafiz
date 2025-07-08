@@ -45,9 +45,21 @@ tl.from("#bannar .left-wrapper img", {
 
 //for typing effect
 var typed = new Typed(".auto_typed",{
-  strings:["social media marketer","Website Designer","YouTube Growth Specialist"],
+  strings:["Social Media Marketer","Website Designer","Youtube Growth Specialist"],
   typeSpeed:150,
   backSpeed:150,
   loop:true
 }
 )
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
