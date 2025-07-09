@@ -1,10 +1,19 @@
 var nav_btn = document.getElementById("nav");
 var nav = document.getElementsByClassName("navbar")[0];
 var tl = gsap.timeline();
-nav_btn.addEventListener("click", function () {
+nav_btn.addEventListener("click", function (e) {
+  e.stopPropagation(); // Yeh prevent karta hai ki event parent elements tak bubble na kare
   nav.style.display = nav.style.display === "block" ? "none" : "block";
   nav_btn.classList.toggle("ri-close-line");
   nav_btn.classList.toggle("ri-menu-3-line");
+});
+
+document.addEventListener("click", function () {
+  if (nav.style.display === "block") {
+    nav.style.display = "none";
+    nav_btn.classList.remove("ri-close-line");
+    nav_btn.classList.add("ri-menu-3-line");
+  }
 });
 
 tl.from("#header h2", {
@@ -26,13 +35,68 @@ tl.from("#header i", {
 });
 tl.from("#bannar .right-wrapper", {
   duration: 1,
-  x: -200,
+  y: -200,
   opacity: 0,
   ease: "power2.out"
 })
 tl.from("#bannar .left-wrapper img", {
   duration: 1,
-  x: 200,
+  y: 200,
+  opacity: 0,
+  ease: "power2.out"
+})
+
+tl.from("#aboutSec .right-wrapper",{
+  duration: 1,
+  y: -200,
+  opacity: 0,
+  ease: "power2.out"
+})
+tl.from("#aboutSec .left-wrapper",{
+  duration: 1,
+  y: 200,
+  opacity: 0,
+  ease: "power2.out"
+})
+
+
+tl.from(".serviceSec .heading",{
+  duration: 1,
+  y: -200,
+  opacity: 0,
+  ease: "power2.out"
+})
+tl.from(".serviceSec .cards-section",{
+   y: 600,
+  opacity: 0,
+  duration:2.5,
+ ease: "expoScale(0.5,7,none)",
+
+})
+
+tl.from("#reviewSection .heading",{
+  duration: 1,
+  y: -200,
+  opacity: 0,
+  ease: "power2.out"
+})
+tl.from("#reviewSection .swiper",{
+    y: 200,
+  opacity: 0,
+  duration:2.5,
+ ease: "expoScale(0.5,7,none)",
+})
+
+
+tl.from("#contactSec .right-wrapper",{
+  duration: 1,
+  y: -100,
+  opacity: 0,
+  ease: "power2.out"
+})
+tl.from("#contactSec .left-wrapper",{
+  duration: 1,
+  y: 100,
   opacity: 0,
   ease: "power2.out"
 })
@@ -41,9 +105,8 @@ tl.from("#myBtn",{
   duration: 1,
   y: 10,
   opacity: 1,
- 
   yoyo: true,
-  repeat: -1 // -1 means infinite repeat
+  repeat: -1
 })
 
 
@@ -71,22 +134,3 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 });
-// Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
