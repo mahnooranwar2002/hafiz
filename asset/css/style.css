@@ -553,12 +553,18 @@ footer {
  
   #reviewSection .swiper-slide {
     width: 100%;
+   
+
   }
   #reviewSection .card {
     width: 100%;
     margin: 10px 0;
+    padding: 20px 20px;
+    
   }
+  
   #reviewSection .cardsec {
     flex-direction: column;
   }
 }
+
