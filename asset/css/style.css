@@ -260,25 +260,46 @@ html {
 }
 
 #counterSec {
-    background-color: rebeccapurple;
+    padding: 30px 0px;
+    background-color: var(--primary-color);
 
     & #counter {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 30px;
+      
+        padding: 10px;
         gap: 0px;
          & .card{
-            background-color: red;
-            width: 33%;
-            padding: 20px;
+            background-color: var(--background-color);
+            width: 25%;
+            padding: 40px;
+            /* border-radius: 10px; */
             text-align: center;
-          
+            
+            
+         
+          & i{
+         
+              font-size: 36px;
+        
+              color: white;
+              border: .5px solid gray;
+              padding: 10px;
+              border-radius: 10px;
+              margin-bottom: 10px;
+              
+              background-color: var(--secondary-color);
+              
+
+          }
+          & h5{
+            margin-top: 20px;
+          }
+         
          }
-          & .r-border{
-            border-right: .5px solid yellow;
-  border-left: .5px solid yellow;
-          
-        }
+    
     
     }
 
@@ -286,7 +307,7 @@ html {
 
 .serviceSec {
 
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     padding: 30px;
 
     & .heading {
@@ -302,7 +323,7 @@ html {
         gap: 10px;
 
         & .card {
-            background-color: var(--background-color);
+            background-color: var(--primary-color);
             border: 2.5px solid var(--secondary-color);
 
             width: 25%;
@@ -529,6 +550,7 @@ footer {
 
     p {
         text-align: center;
+        padding: 20px;
         color: var(--text-color);
 
         & span {
@@ -537,7 +559,10 @@ footer {
     }
 }
 
-@media screen and (max-width:640px) {
+
+/* Add media query for laptop screens */
+
+@media screen and (max-width: 1024px) {
 
     .container {
         padding: 0 60px;
@@ -651,6 +676,28 @@ footer {
             }
         }
     }
+    #counterSec {
+    padding: 10px;
+    background-color: var(--primary-color);
+
+    & #counter {
+       
+          flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+         & .card{
+          
+            width: 100%;
+            
+       
+         
+         }
+    
+    
+    }
+
+}
+
 
     .serviceSec {
         gap: 20px;
@@ -751,212 +798,5 @@ footer {
 
         flex-direction: column;
         padding: 10px;
-    }
-}
-
-/* Add media query for laptop screens */
-@media screen and (max-width: 1024px) {
-    .container {
-        padding: 0 20px;
-        max-width: initial;
-    }
-
-    #header nav {
-        display: none;
-        background-color: var(--primary-color);
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        z-index: 1;
-
-        padding: 30px;
-
-        & ul {
-            flex-direction: column;
-            text-align: center;
-
-            & li {
-                padding: 5px;
-            }
-        }
-    }
-
-    #header i {
-        font-size: 23px;
-        display: block;
-        color: var(--text-color);
-    }
-
-
-    #bannar {
-        flex-direction: column-reverse;
-        padding: 10px;
-        gap: none;
-
-        & .right-wrapper {
-            width: 100%;
-            padding: 0px 10px;
-
-            & .btn {
-                width: 100%;
-                padding: 20px;
-
-                text-align: center;
-
-            }
-
-            & .left-wrapper {
-                /* width: ; */
-                padding: 40px;
-
-
-            }
-
-            & ul {
-
-                display: flex;
-                /* background-color: rebeccapurple; */
-                justify-content: center;
-                align-items: start;
-                padding: 5px;
-                gap: 20px;
-
-                & li a i {
-                    font-size: 24px;
-                }
-
-            }
-        }
-
-        & .left-wrapper {
-            width: 100%;
-            padding: 0px;
-
-            & img {
-                width: 100%;
-            }
-        }
-    }
-
-    #aboutSec {
-
-        & #aboutSection {
-
-            flex-direction: column;
-            gap: 20px;
-
-            & .right-wrapper {
-                padding: 0px;
-                width: 100%;
-
-                & img {
-                    width: 100%;
-                }
-            }
-
-            & .left-wrapper {
-                padding: 10px;
-                width: 100%;
-            }
-        }
-    }
-
-    .serviceSec {
-        & .heading {
-            padding: 10px;
-
-        }
-
-        & .cards-section {
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            & .card {
-                width: 100%;
-            }
-        }
-    }
-
-    #contatus {
-        padding: 0pc;
-    }
-
-    #reviewSection .heading {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    #reviewSection .swiper-slide {
-        width: 100%;
-
-
-    }
-
-    .blankdiv {
-        display: none;
-    }
-
-    #reviewSection .card {
-        width: 100%;
-
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 5px;
-
-        padding: 30px 10px;
-        /* Reduce padding for mobile screens */
-
-
-
-
-        & h6 {
-            text-align: center;
-        }
-
-
-    }
-
-    #reviewSection .cardsec {
-
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #contactSec {
-        padding: 10px;
-
-        & #contatus {
-            flex-direction: column;
-            gap: 5px;
-
-            & .right-wrapper {
-                width: 100%;
-                /* text-align: center; */
-                padding: 10px;
-            }
-
-            & .left-wrapper {
-                width: 100%;
-
-                padding: 10px;
-
-                & form {
-                    padding: 10px 10px;
-
-                    & .form-control {
-                        width: 100%;
-                    }
-
-                    & .form-textarea {
-                        width: 100%;
-                    }
-                }
-            }
-        }
     }
 }

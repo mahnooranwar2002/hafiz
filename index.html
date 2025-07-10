@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="asset/css/style.css">
+    
     <!-- for icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- for JS swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
 <body>
@@ -86,12 +88,26 @@
       <section id="counterSec">
         <div class="container" id="counter">
             <div class="card">
-                
+           <i class="ri-emotion-happy-line"></i>
+         
+                <h5 class="count">190 </h5>
+                <p>Happy Client</p>
+            
             </div>
-            <div class="card r-border">aa</div>
-            <div class="card r-border">aa</div>
-            <div class="card">aa</div>
+            <div class="card "><i class="ri-suitcase-line"></i>
+                 <h5 class="count">800 </h5>
+                <p>Project Completed</p>
+            </div>
+            <div class="card"><i class="ri-hourglass-2-fill"></i>
+            <h5 class="count">3 </h5>
+            <p>years Experiance</p>
+            </div>
+            <div class="card"><i class="ri-file-list-3-fill"></i>
+                    <h5 class="count">29</h5>
+            <p>Certificate</p>
+            </div>
         </div>
+        
       </section>
  <!-- Counter end -->
 
@@ -350,7 +366,42 @@
     <!-- for Typed -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <script src="asset/js/jquery.js"></script>
+     <script>
+          $(document).ready(function() {
+            // Function to start counters when they come into view
+            function startCounters() {
+                $('.count').each(function() {
+                    var $this = $(this);
+                    var target = parseInt($this.data('target'));
+                    
+                    $({count: 0}).animate({count: target}, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.floor(this.count));
+                        },
+                        complete: function() {
+                            $this.text(target); // Ensure final number is exact
+                        }
+                    });
+                });
+            }
 
+            // Set up Intersection Observer
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        startCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe($('.counter-container')[0]);
+        });
+     </script>
     <script src="asset/js/script.js"></script>
 </body>
 
