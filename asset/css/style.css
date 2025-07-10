@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: var(--text-color);
 
 }
 
@@ -28,14 +29,15 @@ p {
 }
 
 :root {
-    --primary-color: #000000;
+    --primary-color: #0c0f16;
     /* Black */
-    --secondary-color: red;
+    --secondary-color: #5eb191;
     /* Purple */
-    --background-color: #262626;
+    --background-color: #151921;
     /* Light Gray */
     --text-color: #ffffff;
     /* White */
+    --theme: ##75dab4;
 }
 
 a {
@@ -49,6 +51,35 @@ html {
     overflow-x: hidden;
 }
 
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    border: 1.3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gradient background */
+/* .gradient-bg {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+} */
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -65,7 +96,7 @@ html {
 
     /* box-shadow: 1px 2px 3px 2.5px var(--secondary-color); */
     & h2 a span {
-        color: red;
+        color: var(--secondary-color);
     }
 
     & nav ul {
@@ -76,14 +107,15 @@ html {
 
         & li a {
             font-weight: 600;
-        padding: 10px;
+            padding: 10px;
         }
-            & li a:hover{
-              background-color: red;
-              padding: 10px;
-              border-radius: 10px;  
-               transition: all 0.2s ease-in-out;
-            }
+
+        & li a:hover {
+            background-color: var(--secondary-color);
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+        }
     }
 
     & i {
@@ -143,7 +175,7 @@ html {
 
             li a i:hover {
                 transition: all 0.3s ease-in-out;
-                background-color: red;
+                background-color: var(--secondary-color);
             }
 
         }
@@ -169,7 +201,7 @@ html {
 .btn {
     background-color: transparent;
     display: inline-block;
-    border: 2px solid red;
+    border: 2px solid var(--secondary-color);
     margin-top: 20px;
     padding: 20px 125px;
     transition: all 0.3s ease-in-out;
@@ -179,12 +211,12 @@ html {
 }
 
 .btn:hover {
-    background-color: red;
+    background-color: var(--secondary-color);
 }
 
 .blankdiv {
     height: 4px;
-    border-top: .5px solid red;
+    border-top: .5px solid var(--secondary-color);
 
     width: 15%;
     margin-bottom: 10px;
@@ -192,7 +224,7 @@ html {
 
 #aboutSec {
     color: white;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 
     & #aboutSection {
 
@@ -215,7 +247,7 @@ html {
             padding: 60px 30px;
 
             & h3 {
-             
+
                 margin-bottom: 10px;
             }
 
@@ -225,6 +257,31 @@ html {
             }
         }
     }
+}
+
+#counterSec {
+    background-color: rebeccapurple;
+
+    & #counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+         & .card{
+            background-color: red;
+            width: 33%;
+            padding: 20px;
+            text-align: center;
+          
+         }
+          & .r-border{
+            border-right: .5px solid yellow;
+  border-left: .5px solid yellow;
+          
+        }
+    
+    }
+
 }
 
 .serviceSec {
@@ -245,9 +302,9 @@ html {
         gap: 10px;
 
         & .card {
-            background-color: var(--primary-color);
-            border: 2.5px solid red;
-            border-bottom: 2.5px solid red;
+            background-color: var(--background-color);
+            border: 2.5px solid var(--secondary-color);
+
             width: 25%;
             text-align: center;
             border-radius: 10px;
@@ -289,18 +346,15 @@ html {
 }
 
 .serviceSec .card:hover {
-    background-color: red;
+    background-color: var(--secondary-color);
     filter: drop-shadow(2px 2px 1px gray);
 }
 
-#contactSec {
 
-
-    background-color: var(--primary-color);
-}
 
 #reviewSection {
-    background-color: var(--primary-color);
+    padding: 30px;
+    background-color: var(--background-color);
     color: var(--text-color);
 }
 
@@ -322,7 +376,7 @@ html {
             padding: 50px;
             height: 300px;
             width: 50%;
-            background-color: var(--background-color);
+            background-color: var(--primary-color);
             border-radius: 10px;
             border: .5px solid var(--background-color);
 
@@ -360,9 +414,14 @@ html {
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: red !important;
+    color: var(--secondary-color) !important;
 }
 
+#contactSec {
+
+
+    background-color: var(--primary-color);
+}
 
 #contatus {
     display: flex;
@@ -457,8 +516,8 @@ html {
 }
 
 footer {
-    background-color: var(--primary-color);
-    border-top: 1.5px solid var(--background-color);
+    background-color: var(--background-color);
+    border-top: 1.5px solid var(--primary-color);
 
     & ul {
         display: flex;
@@ -466,6 +525,15 @@ footer {
         align-items: center;
         gap: 10px;
         padding: 30px;
+    }
+
+    p {
+        text-align: center;
+        color: var(--text-color);
+
+        & span {
+            color: var(--secondary-color);
+        }
     }
 }
 
@@ -491,10 +559,11 @@ footer {
         & ul {
             flex-direction: column;
             text-align: center;
-            & li{
-                padding: 5px  ;
-                 
-               
+
+            & li {
+                padding: 5px;
+
+
             }
         }
 
@@ -526,7 +595,7 @@ footer {
             & .left-wrapper {
                 /* width: ; */
                 padding: 40px;
-                background-color: red;
+
 
             }
 
@@ -584,6 +653,8 @@ footer {
     }
 
     .serviceSec {
+        gap: 20px;
+        padding: 10px;
 
         & .heading {
             text-align: center;
@@ -609,11 +680,12 @@ footer {
 
         & #contatus {
             flex-direction: column;
-           gap: 5px;
+            gap: 5px;
+
             & .right-wrapper {
                 width: 100%;
-           text-align: center;
-           /* margin-bottom: 10px; */
+                text-align: center;
+                /* margin-bottom: 10px; */
                 padding: 10px;
             }
 
@@ -637,10 +709,12 @@ footer {
         }
 
     }
-   #reviewSection .heading{
-    text-align: center;
-    margin-bottom: 10px;
-   }
+
+    #reviewSection .heading {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     #reviewSection .swiper-slide {
         width: 100%;
 
@@ -662,9 +736,9 @@ footer {
 
 
 
-        background-color: var(--background-color);
+
         border-radius: 10px;
-        border: .5px solid var(--background-color);
+
 
         & h6 {
             text-align: center;
@@ -680,96 +754,92 @@ footer {
     }
 }
 
-/* Custom scrollbar styling */
-::-webkit-scrollbar {
-    width: 14px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-    border: 3px solid #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: red;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Gradient background */
-.gradient-bg {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
-}
 /* Add media query for laptop screens */
 @media screen and (max-width: 1024px) {
-  .container {
-    padding: 0 20px;
-    max-width: initial;
-  }
-
-  #header nav {
-    display: none;
-    background-color: var(--primary-color);
-    width: 100%;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    z-index: 1;
-
-    padding: 30px;
-
-    & ul {
-      flex-direction: column;
-      text-align: center;
-      & li{
-        padding: 5px  ;
-      }
+    .container {
+        padding: 0 20px;
+        max-width: initial;
     }
-  }
 
-  #header i {
-    font-size: 23px;
-    display: block;
-    color: var(--text-color);
-  }
-
-  #bannar {
-    flex-direction: column-reverse;
-    padding: 10px;
-    gap: none;
-
-    & .right-wrapper {
-      width: 100%;
-      padding: 0px 10px;
-
-      & .btn {
+    #header nav {
+        display: none;
+        background-color: var(--primary-color);
         width: 100%;
-        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1;
 
-        text-align: center;
+        padding: 30px;
 
-      }
+        & ul {
+            flex-direction: column;
+            text-align: center;
+
+            & li {
+                padding: 5px;
+            }
+        }
     }
 
-    & .left-wrapper {
-      width: 100%;
-      padding: 0px;
-
-      & img {
-        width: 100%;
-      }
+    #header i {
+        font-size: 23px;
+        display: block;
+        color: var(--text-color);
     }
-  }
-   #aboutSec {
+
+
+    #bannar {
+        flex-direction: column-reverse;
+        padding: 10px;
+        gap: none;
+
+        & .right-wrapper {
+            width: 100%;
+            padding: 0px 10px;
+
+            & .btn {
+                width: 100%;
+                padding: 20px;
+
+                text-align: center;
+
+            }
+
+            & .left-wrapper {
+                /* width: ; */
+                padding: 40px;
+
+
+            }
+
+            & ul {
+
+                display: flex;
+                /* background-color: rebeccapurple; */
+                justify-content: center;
+                align-items: start;
+                padding: 5px;
+                gap: 20px;
+
+                & li a i {
+                    font-size: 24px;
+                }
+
+            }
+        }
+
+        & .left-wrapper {
+            width: 100%;
+            padding: 0px;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    #aboutSec {
 
         & #aboutSection {
 
@@ -792,37 +862,42 @@ html {
         }
     }
 
-  .serviceSec {
-      & .heading{
+    .serviceSec {
+        & .heading {
+            padding: 10px;
+
+        }
+
+        & .cards-section {
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            & .card {
+                width: 100%;
+            }
+        }
+    }
+
+    #contatus {
+        padding: 0pc;
+    }
+
+    #reviewSection .heading {
         padding: 10px;
-      
+        margin-bottom: 10px;
     }
-    & .cards-section {
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 10px;
 
-      & .card {
-        width: 100%;
-      }
-    }
-  }
-
-  #contatus {
-    padding: 0pc;
-  }
-   #reviewSection .heading{
-    padding: 10px;
-    margin-bottom: 10px;
-   }
     #reviewSection .swiper-slide {
         width: 100%;
 
 
     }
-  .blankdiv{
-    display: none;
-  }
+
+    .blankdiv {
+        display: none;
+    }
+
     #reviewSection .card {
         width: 100%;
 
@@ -838,9 +913,6 @@ html {
 
 
 
-        background-color: var(--background-color);
-        border-radius: 10px;
-        border: .5px solid var(--background-color);
 
         & h6 {
             text-align: center;
@@ -854,35 +926,37 @@ html {
         flex-direction: column;
         padding: 10px;
     }
-  #contactSec {
-    padding: 10px;
 
-    & #contatus {
-      flex-direction: column;
-      gap: 5px;
-      & .right-wrapper {
-        width: 100%;
-        /* text-align: center; */
-        padding: 10px;
-      }
-
-      & .left-wrapper {
-        width: 100%;
-
+    #contactSec {
         padding: 10px;
 
-        & form {
-          padding: 10px 10px;
+        & #contatus {
+            flex-direction: column;
+            gap: 5px;
 
-          & .form-control {
-            width: 100%;
-          }
+            & .right-wrapper {
+                width: 100%;
+                /* text-align: center; */
+                padding: 10px;
+            }
 
-          & .form-textarea {
-            width: 100%;
-          }
+            & .left-wrapper {
+                width: 100%;
+
+                padding: 10px;
+
+                & form {
+                    padding: 10px 10px;
+
+                    & .form-control {
+                        width: 100%;
+                    }
+
+                    & .form-textarea {
+                        width: 100%;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

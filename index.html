@@ -21,10 +21,10 @@
             <h2><a href=""><span>M</span>uhammad <span>S</span>afeer</a></h2>
             <nav class="navbar">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#bannar">Home</a></li>
+                    <li><a href="#aboutSec">About</a></li>
+                    <li><a href="#serviceSec">Services</a></li>
+                    <li><a href="#contactSec">Contact</a></li>
                 </ul>
             </nav>
             <i class="ri-menu-3-line" id="nav"></i>
@@ -82,6 +82,19 @@
         </div>
     </section>
     <!-- about us end-->
+     <!-- Counter Start -->
+      <section id="counterSec">
+        <div class="container" id="counter">
+            <div class="card">
+                
+            </div>
+            <div class="card r-border">aa</div>
+            <div class="card r-border">aa</div>
+            <div class="card">aa</div>
+        </div>
+      </section>
+ <!-- Counter end -->
+
     <!-- Serivesc start -->
     <section class="serviceSec">
         <div class="container">
@@ -307,10 +320,11 @@
                 </ul>
             </div>
             <div class="left-wrapper">
-                <form action="" method="post">
-                    <input type="text" class="form-control" placeholder="Name">
-                    <input type="text" class="form-control" placeholder="Email">
-                    <textarea name="" id="" class="form-textarea" placeholder="write a massage"></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                      <input type="hidden" name="access_key" value="c6d6e87a-5bfa-4c68-af9d-f29836309e3f">
+                    <input type="text" name="name" class="form-control" placeholder="Name">
+                    <input type="text" name="email" class="form-control" placeholder="Email">
+                    <textarea name="message" id="" class="form-textarea" placeholder="write a massage"></textarea>
                     <button type="submit" class="form-control button">send</button>
                 </form>
             </div>
@@ -320,11 +334,12 @@
     <footer>
         <div class="container">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
+                   <li><a href="#bannar">Home</a></li>
+                    <li><a href="#aboutSec">About</a></li>
+                    <li><a href="#serviceSec">Services</a></li>
+                    <li><a href="#contactSec">Contact</a></li>
             </ul>
+            <p>Created by <span>Mahnoor Anwar</span> | All Rights Reserved.</p>
         </div>
     </footer>
     <!-- for GSAP -->
