@@ -376,12 +376,12 @@ html {
 #reviewSection {
     padding: 30px;
     background-color: var(--background-color);
-    color: var(--text-color);
+
 }
 
 .swiper {
     width: 100%;
-    padding: 450px 0pc;
+    padding: 45px 0pc;
     padding: 40px auto;
 
     & .cardsec {
@@ -565,7 +565,7 @@ footer {
 @media screen and (max-width: 1024px) {
 
     .container {
-        padding: 0 60px;
+        padding:  30px;
         max-width: initial;
 
     }
@@ -756,7 +756,10 @@ footer {
         }
 
     }
-
+ #reviewSection{
+    padding: 10px;
+   
+ }
     #reviewSection .heading {
         text-align: center;
         margin-bottom: 10px;
@@ -764,6 +767,7 @@ footer {
 
     #reviewSection .swiper-slide {
         width: 100%;
+      
 
 
     }
@@ -799,4 +803,9 @@ footer {
         flex-direction: column;
         padding: 10px;
     }
+    .swiper-button-prev,
+.swiper-button-next {
+    /* color: var(--secondary-color) !important; */
+    display: none;
+}
 }
