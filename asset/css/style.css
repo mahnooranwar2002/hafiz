@@ -48,6 +48,7 @@ body,
 html {
     height: 100%;
     width: 100%;
+    background-color: #0c0f16;
     overflow-x: hidden;
 }
 
@@ -268,39 +269,41 @@ html {
         justify-content: center;
         align-items: center;
         border-radius: 30px;
-      
+
         padding: 10px;
         gap: 0px;
-         & .card{
+
+        & .card {
             background-color: var(--background-color);
             width: 25%;
             padding: 40px;
             /* border-radius: 10px; */
             text-align: center;
-            
-            
-         
-          & i{
-         
-              font-size: 36px;
-        
-              color: white;
-              border: .5px solid gray;
-              padding: 10px;
-              border-radius: 10px;
-              margin-bottom: 10px;
-              
-              background-color: var(--secondary-color);
-              
 
-          }
-          & h5{
-            margin-top: 20px;
-          }
-         
-         }
-    
-    
+
+
+            & i {
+
+                font-size: 36px;
+
+                color: white;
+                border: .5px solid gray;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                background-color: var(--secondary-color);
+
+
+            }
+
+            & h5 {
+                margin-top: 20px;
+            }
+
+        }
+
+
     }
 
 }
@@ -371,7 +374,73 @@ html {
     filter: drop-shadow(2px 2px 1px gray);
 }
 
+#projectSec {
+    padding: 30px;
+    background-color: var(--primary-color);
 
+    & .cardsection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: rebeccapurple; */
+    position: relative;
+
+    & .flip-card-back {
+        position: absolute;
+        top: 100%;
+        padding: 20px;
+        height: 100%;
+        overflow: hidden;
+        background-color: var(--secondary-color);
+
+        & h4 {
+            text-align: center;
+            font-size: medium;
+        }
+
+        & p {
+            margin-top: 10px;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & a {
+                display: inline-block;
+                margin-top: 10px;
+                text-align: center;
+
+                border: .5px solid grey;
+                border-radius: 50%;
+                padding: 20px;
+            }
+        }
+
+
+    }
+
+
+    /* transform: rotateX(35deg); */
+
+}
+
+.flip-card:hover .flip-card-back {
+    top: 0%;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
 
 #reviewSection {
     padding: 30px;
@@ -559,13 +628,35 @@ footer {
     }
 }
 
+.project-sect {
+    background-color: var(--primary-color);
+padding: 30px 0pc;
+
+    & #projectSec {
+        display: flex;
+        gap: 30px;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 2px gray);
+        background-color: var(--background-color);
+
+        & .left-wrapper {
+            width: 50%;
+        }
+
+        & .right-wrapper {
+            width: 50%;
+            
+        }
+    }
+}
+
 
 /* Add media query for laptop screens */
 
 @media screen and (max-width: 1024px) {
 
     .container {
-        padding:  30px;
+        padding: 30px;
         max-width: initial;
 
     }
@@ -676,27 +767,29 @@ footer {
             }
         }
     }
+
     #counterSec {
-    padding: 10px;
-    background-color: var(--primary-color);
-
-    & #counter {
-       
-          flex-direction: column;
         padding: 10px;
-        gap: 10px;
-         & .card{
-          
-            width: 100%;
-            
-       
-         
-         }
-    
-    
-    }
+        background-color: var(--primary-color);
 
-}
+        & #counter {
+
+            flex-direction: column;
+            padding: 10px;
+            gap: 10px;
+
+            & .card {
+
+                width: 100%;
+
+
+
+            }
+
+
+        }
+
+    }
 
 
     .serviceSec {
@@ -756,10 +849,12 @@ footer {
         }
 
     }
- #reviewSection{
-    padding: 10px;
-   
- }
+
+    #reviewSection {
+        padding: 10px;
+
+    }
+
     #reviewSection .heading {
         text-align: center;
         margin-bottom: 10px;
@@ -767,7 +862,7 @@ footer {
 
     #reviewSection .swiper-slide {
         width: 100%;
-      
+
 
 
     }
@@ -782,7 +877,7 @@ footer {
         flex-direction: column;
         gap: 5px;
 
-        padding: 30px 10px;
+        padding: 20px;
         /* Reduce padding for mobile screens */
 
 
@@ -791,21 +886,47 @@ footer {
         border-radius: 10px;
 
 
+
         & h6 {
-            text-align: center;
+            margin-top: 5px;
+            font-size: 20px;
         }
 
-
+        i {
+            display: none;
+        }
     }
+
 
     #reviewSection .cardsec {
 
         flex-direction: column;
         padding: 10px;
     }
+
     .swiper-button-prev,
-.swiper-button-next {
-    /* color: var(--secondary-color) !important; */
-    display: none;
-}
+    .swiper-button-next {
+        /* color: var(--secondary-color) !important; */
+        display: none;
+    }
+    .project-sect{
+        padding: 0%;
+    #projectSec {
+        padding: 0%;
+        flex-direction: column;
+
+        & .left-wrapper {
+            width: 100%;
+            padding: 20px;
+            /* background-color: rebeccapurple; */
+            
+        }
+
+        & .right-wrapper {
+            
+            width: 100%;
+           
+            
+        }
+    }}
 }

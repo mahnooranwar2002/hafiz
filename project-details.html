@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- for JS swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <section class="header">
+        <div id="header" class="container">
+            <h2><a href=""><span>M</span>uhammad <span>S</span>afeer</a></h2>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#bannar">Home</a></li>
+                    <li><a href="#aboutSec">About</a></li>
+                    <li><a href="#serviceSec">Services</a></li>
+                    <li><a href="#serviceSec">Projects</a></li>
+
+                    <li><a href="#contactSec">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="ri-menu-3-line" id="nav"></i>
+
+        </div>
+        <!-- header end -->
+        <!-- bannar start -->
+
+    </section>
+    <section class="project-sect">
+        <div class="container" id="projectSec">
+            <div class="right-wrapper">
+                <img id="project-image" src="" alt="">
+            </div>
+            <div class="left-wrapper">
+                <h1 id="project-name"></h1>
+                <p id="client-name"></p>
+                <p id="project-objectives"></p>
+                <p id="target-audience"></p>
+                <p id="gender"></p>
+                <p id="location"></p>
+                <p id="interests"></p>
+                <p id="language"></p>
+                <p id="platforms-used"></p>
+                <p id="services"></p>
+                <p id="tools-used"></p>
+                <p id="result"></p>
+            </div>
+        </div>
+
+     
+    </section>
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#bannar">Home</a></li>
+                <li><a href="#aboutSec">About</a></li>
+                <li><a href="#serviceSec">Services</a></li>
+                <li><a href="#contactSec">Contact</a></li>
+            </ul>
+            <p>Created by <span>Mahnoor Anwar</span> | All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        var projectName = new URLSearchParams(window.location.search).get('project');
+        var image = new URLSearchParams(window.location.search).get('image');
+        var CName = new URLSearchParams(window.location.search).get('CName');
+        var PObjectives = new URLSearchParams(window.location.search).get('PObjectives');
+        var TargetAudience = new URLSearchParams(window.location.search).get('TargetAudience');
+        var Gender = new URLSearchParams(window.location.search).get('Gender');
+        var Location = new URLSearchParams(window.location.search).get('Location');
+        var Interests = new URLSearchParams(window.location.search).get('Interests');
+        var Language = new URLSearchParams(window.location.search).get('Language');
+        var PlatformsUsed = new URLSearchParams(window.location.search).get('PlatformsUsed');
+        var Services = new URLSearchParams(window.location.search).get('Services');
+        var ToolsUsed = new URLSearchParams(window.location.search).get('ToolsUsed');
+        var Result = new URLSearchParams(window.location.search).get('Result');
+
+        document.getElementById("project-name").innerHTML = projectName;
+        document.getElementById("client-name").innerHTML = `<strong>Client Name:</strong> ${CName}`;
+        document.getElementById("project-objectives").innerHTML = `<strong>Project Objectives:</strong> ${PObjectives}`;
+        document.getElementById("target-audience").innerHTML = `<strong>Target Audience:</strong> ${TargetAudience}`;
+        document.getElementById("gender").innerHTML = `<strong>Gender:</strong> ${Gender}`;
+        document.getElementById("location").innerHTML = `<strong>Location:</strong> ${Location}`;
+        document.getElementById("interests").innerHTML = `<strong>Interests:</strong> ${Interests}`;
+        document.getElementById("language").innerHTML = `<strong>Language:</strong> ${Language}`;
+        document.getElementById("platforms-used").innerHTML = `<strong>Platforms Used:</strong> ${PlatformsUsed}`;
+        document.getElementById("services").innerHTML = `<strong>Services:</strong> ${Services}`;
+        document.getElementById("tools-used").innerHTML = `<strong>Tools Used:</strong> ${ToolsUsed}`;
+        document.getElementById("result").innerHTML = `<strong>Result:</strong> ${Result}`;
+        document.getElementById("project-image").src = image;
+    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- for Typed -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="asset/js/jquery.js"></script>
+    <script src="asset/js/projects.js"></script>
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>
