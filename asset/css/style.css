@@ -358,11 +358,11 @@ html {
     }
 }
 
-.serviceSec .card {
+#serviceSec .card {
     transition: all 0.3s ease-in-out;
 }
 
-.serviceSec .card:hover {
+#serviceSec .card:hover {
     background-color: var(--secondary-color);
     filter: drop-shadow(2px 2px 1px gray);
 }
@@ -795,7 +795,7 @@ footer {
     }
 
 
-    .serviceSec {
+    #serviceSec {
         gap: 20px;
         padding: 10px;
 
