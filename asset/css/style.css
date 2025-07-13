@@ -898,6 +898,7 @@ footer {
             align-items: center;
 
             margin-bottom: 5px;
+
             & li  i {
             /* display: none; */
             font-size: 14px;
@@ -908,10 +909,11 @@ footer {
 
 
 
+
         & h6 {
             margin-top: 0px;
             
-            font-size: 16px;
+            font-size: 12px;
             margin-bottom: 20px;
         }
 
