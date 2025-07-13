@@ -883,7 +883,7 @@ footer {
         gap: 5px;
       
 
-        padding: 30px;
+        padding: 0px 20px;
         /* Reduce padding for mobile screens */
 
 
@@ -897,7 +897,7 @@ footer {
             justify-content: center;
             align-items: center;
 
-            margin-bottom: 5px;
+            /* margin-bottom: 5px; */
 
             & li  i {
             /* display: none; */
