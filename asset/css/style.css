@@ -881,9 +881,9 @@ footer {
         justify-content: center;
         flex-direction: column;
         gap: 5px;
-      
+      background-color: red;
 
-        padding: 30px 20px 50px 20px;
+        padding: 30px;
         /* Reduce padding for mobile screens */
 
 
@@ -900,6 +900,8 @@ footer {
             margin-bottom: 5px;
             & li  i {
             /* display: none; */
+            font-size: 14px;
+            background-color: red;
          
         }
         }
