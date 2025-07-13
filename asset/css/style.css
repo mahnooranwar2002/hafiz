@@ -911,14 +911,12 @@ footer {
 
 
         & h6 {
-            margin-top: 10px;
+            margin-top: 2px;
             
-            font-size: 16px;
+            font-size: 12px;
           background-color: rebeccapurple;
         }
-  & p{
-    
-  }
+ 
       
     }
 
