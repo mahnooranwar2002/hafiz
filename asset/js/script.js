@@ -2,7 +2,7 @@ var nav_btn = document.getElementById("nav");
 var nav = document.getElementsByClassName("navbar")[0];
 var tl = gsap.timeline();
 nav_btn.addEventListener("click", function (e) {
-  e.stopPropagation(); // Yeh prevent karta hai ki event parent elements tak bubble na kare
+  e.stopPropagation(); 
   nav.style.display = nav.style.display === "block" ? "none" : "block";
   nav_btn.classList.toggle("ri-close-line");
   nav_btn.classList.toggle("ri-menu-3-line");
@@ -58,20 +58,31 @@ tl.from("#aboutSec .left-wrapper",{
   opacity: 0,
   ease: "power2.out"
 })
+tl.from("#counterSec #counter .card",{
+    duration: 1,
+  y: -200,
+  opacity: 0,
+  ease: "power2.out"
+})
 
-
-tl.from(".serviceSec .heading",{
+tl.from("#serviceSec .heading",{
   duration: 1,
   y: -200,
   opacity: 0,
   ease: "power2.out"
 })
-tl.from(".serviceSec .cards-section",{
+tl.from("#serviceSec .cards-section",{
    y: 600,
   opacity: 0,
   duration:2.5,
  ease: "expoScale(0.5,7,none)",
 
+})
+ tl.from("#projectSec .heading",{
+  duration: 1,
+  y: 200,
+  opacity: 0,
+  ease: "power2.out"
 })
 
 tl.from("#reviewSection .heading",{
@@ -109,7 +120,19 @@ tl.from("#myBtn",{
   repeat: -1
 })
 
+tl.from("footer",{
+    duration: 1,
+  y: -100,
+  opacity: 0,
+  ease: "power2.out"
+})
 
+tl.from(".project-sect #projectSec .right-wrapper",{
+   duration: 1,
+  y: 100,
+  opacity: 0,
+  ease: "power2.out"
+})
 
 
 

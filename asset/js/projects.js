@@ -1,13 +1,11 @@
 var project = [
   {
-    pName:
-      "Google Ads and Social Media Marketing for London-Based Dental Clinic",
+    pName:"Google Ads and Social Media Marketing for London-Based Dental Clinic",
     CName: "Bright Smile Dental Care – London, UK",
     PObjectives:
       "Generate high-quality leads for dental services (braces, whitening, implants) Drive traffic to clinic website and appointment booking page Increase local brand visibility in the Greater London area",
     TargetAudience: " 25–55",
-    image:
-      "https://t4.ftcdn.net/jpg/02/94/86/43/360_F_294864304_JVjEWTYCJFg7wJuLna9ISWiulsjuyzm7.jpg",
+    image: "../../asset/image/project2.jpg",
     Gender: "All",
     Location: " Central and Greater London",
     Interests: "Healthcare, Personal Wellness, Cosmetic Dentistry",
@@ -40,7 +38,7 @@ var project = [
   {
     pName: "Instagram  Facebook Ads for UK-Based Online Clothing Store",
     CName: "Urban Vogue – Online Boutique (Manchester, UK)",
-    image:"https://m.seonews.ru/upload/iblock/541/541e51a34871ca4891dbcf2ccc798058.png",
+    image:"../../asset/image/project1.jpg",
     PObjectives:
       "Drive sales of summer clothing collection Retarget cart abandoners and existing customers Build brand following on Instagram",
     Age: "18–35",
@@ -83,7 +81,7 @@ var project = [
     pName: "Google Ads for Real Estate Agent in Texas, USA",
     CName: "Austin Home Deals – Real Estate Agency (Austin, Texas)",
     image:
-      "https://miro.medium.com/v2/resize:fit:750/1*WLmTv4syBqcj98is3zNYag.jpeg",
+      "../../asset/image/project2.jpg",
     PObjectives:
       "Generate buyer & seller leads for residential properties Drive traffic to real estate landing pages Build local brand presence in Austin area",
     Age: "30–60",
@@ -128,8 +126,8 @@ var project = [
     pName: "Google Ads for Real Estate Agent in Texas, USA",
     CName: "Google Ads for Real Estate Agent in Texas, USA",
     image:
-      "https://images.ctfassets.net/3s5io6mnxfqz/5Ao8flSTCJjsXDHPWXNdPB/73321c3d1b15b67e0f5c8c6223c03026/predictive_analytics_.jpeg",
-    PObjectives:
+      "../../asset/image/project2.jpg", 
+       PObjectives:
       "Generate buyer & seller leads for residential properties Drive traffic to real estate landing pages Build local brand presence in Austin area",
     Age: "30–60",
     Gender: "Female",
@@ -173,7 +171,7 @@ var project = [
     pName: "Facebook Ads for Beauty Salon in Los Angeles, USA",
     CName: "Glow & Go Beauty Lounge – Los Angeles, California",
     image:
-      "https://econsultancy.imgix.net/content/uploads/2018/09/11132938/metrics.jpg?auto=compress,format&q=60&w=1885&h=1413",
+      "../../asset/image/project1.jpg",
     PObjectives:
       "Attract new clients for facials & skincare packages Promote limited-time discounts Increase Instagram followers and reviews",
     Age: "20-45",
@@ -214,7 +212,7 @@ var project = [
     pName: "Complete SEO Optimization for E-Commerce Jewelry Brand – USA",
     CName: "LuxeGems – Online Jewelry Store (New York, USA)",
     image:
-      "https://newscenter.io/wp-content/uploads/2017/05/home-slide-3.jpg",
+      "../../asset/image/project3.jpg",
     PObjectives:
       "Improve Google search rankings for product keywords Increase organic traffic to product & collection pages Boost domain authority and reduce dependency on paid ads",
     Age: "25–55",
