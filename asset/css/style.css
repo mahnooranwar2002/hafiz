@@ -913,12 +913,12 @@ footer {
         & h6 {
             margin-top: 2px;
             
-            font-size: 14px;
-          background-color: rebeccapurple;
+            font-size: 16px;
+          /* background-color: rebeccapurple; */
         }
  
         p{
-            font-size: 12px;
+            font-size: 14px;
         }
       
     }
